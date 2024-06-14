@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d05a8jpdpfe0"]
+
+[ext_resource type="Texture2D" uid="uid://dd14j7isrec2j" path="res://assets/sprites/world/Cave.png" id="1_4cde8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clbxo"]
+size = Vector2(96, 32)
+
+[node name="platform01" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4cde8")
+region_enabled = true
+region_rect = Rect2(0, 192, 96, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_clbxo")
+one_way_collision = true
