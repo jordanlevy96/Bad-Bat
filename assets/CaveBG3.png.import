@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mp4dne7uuw5s"
-path="res://.godot/imported/Pillar3.png-1df03d1a35986297d8011d4f2005f732.ctex"
+uid="uid://0nub66jd3ip6"
+path="res://.godot/imported/CaveBG3.png-94e5473436abeeb1a4fe759f968adf0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pillar3.png"
-dest_files=["res://.godot/imported/Pillar3.png-1df03d1a35986297d8011d4f2005f732.ctex"]
+source_file="res://tempAssets/CaveBG3.png"
+dest_files=["res://.godot/imported/CaveBG3.png-94e5473436abeeb1a4fe759f968adf0b.ctex"]
 
 [params]
 

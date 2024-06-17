@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rquia0wfntfg"
-path="res://.godot/imported/_AttackNoMovement.png-3e745e0babc6344112c6d9050b220f73.ctex"
+path="res://.godot/imported/_AttackNoMovement.png-11dd2d21a61eeed2cca0cc3bb9b8f2d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/character/knight 120x80_PNGSheets/_AttackNoMovement.png"
-dest_files=["res://.godot/imported/_AttackNoMovement.png-3e745e0babc6344112c6d9050b220f73.ctex"]
+source_file="res://tempAssets/sprites/character/knight 120x80_PNGSheets/_AttackNoMovement.png"
+dest_files=["res://.godot/imported/_AttackNoMovement.png-11dd2d21a61eeed2cca0cc3bb9b8f2d1.ctex"]
 
 [params]
 

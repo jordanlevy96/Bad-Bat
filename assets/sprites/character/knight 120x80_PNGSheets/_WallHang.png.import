@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn8ovls3vr5ie"
-path="res://.godot/imported/_WallHang.png-491353437050dbb74854d62d2f18ac59.ctex"
+path="res://.godot/imported/_WallHang.png-773ca8eca615b72ef758f686355e0782.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/character/knight 120x80_PNGSheets/_WallHang.png"
-dest_files=["res://.godot/imported/_WallHang.png-491353437050dbb74854d62d2f18ac59.ctex"]
+source_file="res://tempAssets/sprites/character/knight 120x80_PNGSheets/_WallHang.png"
+dest_files=["res://.godot/imported/_WallHang.png-773ca8eca615b72ef758f686355e0782.ctex"]
 
 [params]
 
