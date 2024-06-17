@@ -3,9 +3,9 @@ extends Area2D
 @onready var player = %Player
 
 func _on_body_entered(_body):
-	print("Invisible")
+	player.is_hidden = true
 
 
 func _on_body_exited(_body):
-	print("Visible")
+	player.is_hidden = false
 

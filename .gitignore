@@ -1,6 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 
+Build/*
 build/*
 **/*.exe
 **/*.zip

@@ -1,49 +1,49 @@
-[gd_scene load_steps=18 format=3 uid="uid://d1mbuvi86dkic"]
+[gd_scene load_steps=18 format=3 uid="uid://bfyrfeqovds7q"]
 
-[ext_resource type="Script" path="res://scripts/snake_02.gd" id="1_utow3"]
-[ext_resource type="Texture2D" uid="uid://dbr8jf3bl07bv" path="res://assets/sprites/enemies/snake02-spritesheet.png" id="1_wnpxa"]
-[ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="2_chogt"]
-[ext_resource type="Texture2D" uid="uid://ca8kiu2v8xcd2" path="res://assets/sprites/enemies/Detection Ray.png" id="3_f26af"]
-[ext_resource type="AudioStream" uid="uid://bfb5l6r0clqvq" path="res://assets/sounds/snake-attack.wav" id="5_p55yv"]
+[ext_resource type="Script" path="res://scripts/snake_02.gd" id="1_hfak7"]
+[ext_resource type="Texture2D" uid="uid://dbr8jf3bl07bv" path="res://assets/sprites/enemies/snake02-spritesheet.png" id="2_wqgf8"]
+[ext_resource type="Texture2D" uid="uid://ca8kiu2v8xcd2" path="res://assets/sprites/enemies/Detection Ray.png" id="3_m24qb"]
+[ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="4_0oows"]
+[ext_resource type="AudioStream" uid="uid://bfb5l6r0clqvq" path="res://assets/sounds/snake-attack.wav" id="5_oi72x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eydhk"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(0, 32, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5kgy3"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(48, 32, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1dyv"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(96, 32, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1dqmd"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(144, 32, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p5ns5"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(0, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_igomi"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(48, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgcsd"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(96, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dowx2"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(144, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hxaa"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(192, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btwg0"]
-atlas = ExtResource("1_wnpxa")
+atlas = ExtResource("2_wqgf8")
 region = Rect2(240, 0, 48, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kc44r"]
@@ -90,10 +90,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1atgg"]
-size = Vector2(46, 22)
+size = Vector2(51, 22)
 
 [node name="snake02" type="Node2D"]
-script = ExtResource("1_utow3")
+script = ExtResource("1_hfak7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kc44r")
@@ -104,10 +104,10 @@ autoplay = "walk"
 modulate = Color(1, 1, 1, 0.254902)
 show_behind_parent = true
 position = Vector2(-30, -8)
-texture = ExtResource("3_f26af")
+texture = ExtResource("3_m24qb")
 
-[node name="killzone" parent="." instance=ExtResource("2_chogt")]
-position = Vector2(-9, 0)
+[node name="killzone" parent="." instance=ExtResource("4_0oows")]
+position = Vector2(-11, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(0, 1)
@@ -122,7 +122,7 @@ position = Vector2(0, 9)
 target_position = Vector2(-20, 0)
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_p55yv")
+stream = ExtResource("5_oi72x")
 bus = &"SFX"
 
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
