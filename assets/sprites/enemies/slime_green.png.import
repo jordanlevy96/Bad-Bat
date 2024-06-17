@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8g5cia15x4ys"
-path="res://.godot/imported/slime_green.png-a79c46c19ad867ec639d99b14ec73c99.ctex"
+path="res://.godot/imported/slime_green.png-d4cd19f65f6d34aa14d5ffee3cacd0fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/enemies/slime_green.png"
-dest_files=["res://.godot/imported/slime_green.png-a79c46c19ad867ec639d99b14ec73c99.ctex"]
+source_file="res://tempAssets/sprites/enemies/slime_green.png"
+dest_files=["res://.godot/imported/slime_green.png-d4cd19f65f6d34aa14d5ffee3cacd0fe.ctex"]
 
 [params]
 

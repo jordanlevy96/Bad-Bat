@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8gg5g1phwkaf"
-path="res://.godot/imported/Stalagmites.png-e98cc11df706a6579cc6eebd031b4b3d.ctex"
+uid="uid://mp4dne7uuw5s"
+path="res://.godot/imported/Pillar3.png-33559e50b52b8cc31b0205b3ada75860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Stalagmites.png"
-dest_files=["res://.godot/imported/Stalagmites.png-e98cc11df706a6579cc6eebd031b4b3d.ctex"]
+source_file="res://tempAssets/Pillar3.png"
+dest_files=["res://.godot/imported/Pillar3.png-33559e50b52b8cc31b0205b3ada75860.ctex"]
 
 [params]
 
