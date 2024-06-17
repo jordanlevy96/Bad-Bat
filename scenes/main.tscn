@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://b4jtn0xpepcwl"]
 
 [ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="1_1pgbp"]
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_7ybr6"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_7ybr6"]
 [ext_resource type="Texture2D" uid="uid://dd14j7isrec2j" path="res://assets/sprites/world/Cave.png" id="2_oetlq"]
 [ext_resource type="Texture2D" uid="uid://bd6x5wea4mted" path="res://assets/sprites/world/ParallaxCave4.png" id="2_qjtgh"]
 [ext_resource type="PackedScene" uid="uid://d05a8jpdpfe0" path="res://scenes/platform_01.tscn" id="3_3e73d"]
