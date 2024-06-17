@@ -1,8 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://d1mbuvi86dkic"]
+[gd_scene load_steps=18 format=3 uid="uid://d1mbuvi86dkic"]
 
 [ext_resource type="Script" path="res://scripts/snake_02.gd" id="1_utow3"]
 [ext_resource type="Texture2D" uid="uid://dbr8jf3bl07bv" path="res://assets/sprites/enemies/snake02-spritesheet.png" id="1_wnpxa"]
 [ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="2_chogt"]
+[ext_resource type="Texture2D" uid="uid://ca8kiu2v8xcd2" path="res://assets/sprites/enemies/Detection Ray.png" id="3_f26af"]
+[ext_resource type="AudioStream" uid="uid://bfb5l6r0clqvq" path="res://assets/sounds/snake-attack.wav" id="5_p55yv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eydhk"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kgy3"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1dyv"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dqmd"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(144, 32, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p5ns5"]
 atlas = ExtResource("1_wnpxa")
@@ -32,6 +50,23 @@ region = Rect2(240, 0, 48, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_eydhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kgy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1dyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dqmd")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_p5ns5")
 }, {
 "duration": 1.0,
@@ -50,25 +85,32 @@ animations = [{
 "texture": SubResource("AtlasTexture_btwg0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1atgg"]
-size = Vector2(30, 22)
+size = Vector2(46, 22)
 
 [node name="snake02" type="Node2D"]
 script = ExtResource("1_utow3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kc44r")
-autoplay = "default"
-frame_progress = 0.795328
+animation = &"attack"
+autoplay = "walk"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0.254902)
+show_behind_parent = true
+position = Vector2(-30, -8)
+texture = ExtResource("3_f26af")
 
 [node name="killzone" parent="." instance=ExtResource("2_chogt")]
+position = Vector2(-9, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-1, 1)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_1atgg")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
@@ -78,3 +120,10 @@ target_position = Vector2(17, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, 9)
 target_position = Vector2(-20, 0)
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_p55yv")
+bus = &"SFX"
+
+[connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
+[connection signal="body_exited" from="killzone" to="." method="_on_killzone_body_exited"]

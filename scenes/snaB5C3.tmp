@@ -1,0 +1,135 @@
+[gd_scene load_steps=18 format=3 uid="uid://d1mbuvi86dkic"]
+
+[ext_resource type="Script" path="res://scripts/snake_02.gd" id="1_utow3"]
+[ext_resource type="Texture2D" uid="uid://dbr8jf3bl07bv" path="res://assets/sprites/enemies/snake02-spritesheet.png" id="1_wnpxa"]
+[ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="2_chogt"]
+[ext_resource type="Texture2D" uid="uid://ca8kiu2v8xcd2" path="res://assets/sprites/enemies/Detection Ray.png" id="3_f26af"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eydhk"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kgy3"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1dyv"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dqmd"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5ns5"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igomi"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgcsd"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dowx2"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hxaa"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btwg0"]
+atlas = ExtResource("1_wnpxa")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kc44r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eydhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kgy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1dyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dqmd")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5ns5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igomi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgcsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dowx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hxaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btwg0")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1atgg"]
+size = Vector2(30, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnoh1"]
+size = Vector2(60, 32)
+
+[node name="snake02" type="Node2D"]
+script = ExtResource("1_utow3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kc44r")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+modulate = Color(1, 1, 1, 0.254902)
+show_behind_parent = true
+position = Vector2(-30, -8)
+texture = ExtResource("3_f26af")
+
+[node name="RayCastAttack" type="RayCast2D" parent="AnimatedSprite2D/Sprite2D"]
+position = Vector2(15, 8)
+target_position = Vector2(-31, 0)
+collision_mask = 2
+
+[node name="killzone" parent="." instance=ExtResource("2_chogt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_1atgg")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 9)
+target_position = Vector2(17, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 9)
+target_position = Vector2(-20, 0)
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(-16, -4)
+shape = SubResource("RectangleShape2D_dnoh1")

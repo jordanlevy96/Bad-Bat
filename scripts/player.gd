@@ -10,9 +10,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var collision_shape = $CollisionShape2D
-
+@onready var raycast_crouching_1 = $RayCast2D_Crouching1
+@onready var raycast_crouching_2 = $RayCast2D_Crouching2
 
 var is_crouching = false
+var stuck_crouching = false
+var is_hidden = false
 
 var standing_cshape = preload("res://resources/player_standing_cshape.tres")
 var crouching_cshape = preload("res://resources/player_crouching_cshape.tres")
@@ -30,16 +33,35 @@ func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
 	
 	# Flip the Sprite
-	if direction > 0:
-		animated_sprite.flip_h = false
-	elif  direction < 0:
-		animated_sprite.flip_h = true
+	if direction != 0:
+		animated_sprite.flip_h = (direction == -1)
+		animated_sprite.position.x = direction * 4
 	
 	# Crouch
 	if Input.is_action_just_pressed("crouch"):
 		crouch()
+		# Stealth mechanic (if colliding with rock and crouching)
+		if is_hidden:
+			stealth()
+		else:
+			cancel_stealth()
 	elif Input.is_action_just_released("crouch"):
+		if not_stuck_crouching():
+			stand()
+			cancel_stealth()
+		else:
+			if stuck_crouching !=true:
+				stuck_crouching = true
+	
+	if is_crouching:
+		if is_hidden:
+			stealth()
+
+	
+	if stuck_crouching and not_stuck_crouching():
 		stand()
+		cancel_stealth()
+		stuck_crouching = false
 	
 	#Play animations
 	if is_on_floor():
@@ -67,12 +89,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	# Stealth mechanic
-	if Input.is_action_just_pressed("crouch"):
-		stealth()
-	elif Input.is_action_just_released("crouch"):
-		cancel_stealth()
-	
+func not_stuck_crouching() -> bool:
+	var result = not raycast_crouching_1.is_colliding() and not raycast_crouching_2.is_colliding()
+	return result
 	
 func crouch():
 	if is_crouching:
@@ -87,12 +106,13 @@ func stand():
 	is_crouching = false
 	collision_shape.shape = standing_cshape
 	collision_shape.position.y = -18
+	cancel_stealth()
 	
 func stealth():
 	set_collision_layer_value(2, false)
-	print("ON")
+	print("Invisible")
 
 func cancel_stealth():
 	if get_collision_layer_value(2) == false:
 		set_collision_layer_value(2, true)
-		print("OFF")
+		print("Visible")
