@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp73grbrwvp3p"
-path="res://.godot/imported/_TurnAround.png-39c79db9afbef9b7e57ad19f500e7f40.ctex"
+path="res://.godot/imported/_TurnAround.png-dfe34c4cd218988809ef31d9c2ae05be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tempAssets/sprites/character/knight 120x80_PNGSheets/_TurnAround.png"
-dest_files=["res://.godot/imported/_TurnAround.png-39c79db9afbef9b7e57ad19f500e7f40.ctex"]
+source_file="res://assets/sprites/character/knight 120x80_PNGSheets/_TurnAround.png"
+dest_files=["res://.godot/imported/_TurnAround.png-dfe34c4cd218988809ef31d9c2ae05be.ctex"]
 
 [params]
 
