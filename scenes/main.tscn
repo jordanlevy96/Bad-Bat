@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b4jtn0xpepcwl"]
+[gd_scene load_steps=16 format=3 uid="uid://b4jtn0xpepcwl"]
 
 [ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="1_1pgbp"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7ybr6"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="5_8mwrn"]
 [ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="10_m62hr"]
 [ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="11_cpkmm"]
-[ext_resource type="PackedScene" uid="uid://cqibittitdhyi" path="res://scenes/hud.tscn" id="12_hhfqc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75bgx"]
 texture = ExtResource("2_oetlq")
@@ -3429,8 +3428,3 @@ theme_override_fonts/font = ExtResource("11_cpkmm")
 theme_override_font_sizes/font_size = 8
 text = "hide"
 horizontal_alignment = 1
-
-[node name="HUD" parent="." instance=ExtResource("12_hhfqc")]
-layer = 2
-
-[connection signal="start_game" from="HUD" to="." method="new_game"]
