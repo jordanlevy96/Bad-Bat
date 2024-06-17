@@ -370,11 +370,19 @@ collision_mask = 5
 script = ExtResource("1_h13gn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -40)
+position = Vector2(4, -40)
 sprite_frames = SubResource("SpriteFrames_t0dku")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -18)
 shape = ExtResource("8_eexei")
+
+[node name="RayCast2D_Crouching1" type="RayCast2D" parent="."]
+position = Vector2(-6, 0)
+target_position = Vector2(0, -36)
+
+[node name="RayCast2D_Crouching2" type="RayCast2D" parent="."]
+position = Vector2(6, 0)
+target_position = Vector2(0, -36)
