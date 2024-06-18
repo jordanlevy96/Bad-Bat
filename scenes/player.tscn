@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c27pi5gnak42v"]
+[gd_scene load_steps=31 format=3 uid="uid://c27pi5gnak42v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_h13gn"]
 [ext_resource type="Texture2D" uid="uid://boyperyi6s1pg" path="res://assets/sprites/character/crouch/Echo_Crouch-1.png" id="2_e13ut"]
@@ -28,6 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://cq1wwssbcxgm2" path="res://assets/sprites/character/run/Echo_Run4.png" id="21_l7w5n"]
 [ext_resource type="Texture2D" uid="uid://bli1svq53mabo" path="res://assets/sprites/character/run/Echo_Run5.png" id="22_3t0jh"]
 [ext_resource type="Texture2D" uid="uid://mwa5l101hqmv" path="res://assets/sprites/character/run/Echo_Run6.png" id="23_rowfp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2kmq"]
+atlas = ExtResource("17_ivjs8")
+region = Rect2(0, 0, 3000, 3000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t0dku"]
 animations = [{
@@ -72,6 +76,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_t2kmq")
+}, {
+"duration": 1.0,
 "texture": ExtResource("5_jop7t")
 }, {
 "duration": 1.0,
@@ -79,7 +86,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"fall",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -155,20 +162,20 @@ collision_mask = 5
 script = ExtResource("1_h13gn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -30)
-scale = Vector2(0.02, 0.02)
+position = Vector2(-5, -22.5)
+scale = Vector2(0.015, 0.015)
 sprite_frames = SubResource("SpriteFrames_t0dku")
-animation = &"crouch_idle"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -23)
+position = Vector2(0, -16)
 shape = ExtResource("8_eexei")
 
 [node name="RayCast2D_Crouching1" type="RayCast2D" parent="."]
-position = Vector2(-6, 0)
-target_position = Vector2(0, -46)
+position = Vector2(-10, 0)
+target_position = Vector2(0, -32)
 
 [node name="RayCast2D_Crouching2" type="RayCast2D" parent="."]
-position = Vector2(6, 0)
-target_position = Vector2(0, -46)
+position = Vector2(10, 0)
+target_position = Vector2(0, -32)

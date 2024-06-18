@@ -35,7 +35,7 @@ func _physics_process(delta):
 	# Flip the Sprite
 	if direction != 0:
 		animated_sprite.flip_h = (direction == -1)
-		animated_sprite.position.x = direction * 4
+		animated_sprite.position.x = direction * -5
 	
 	# Crouch
 	if Input.is_action_just_pressed("crouch"):
@@ -98,14 +98,14 @@ func crouch():
 		return
 	is_crouching = true
 	collision_shape.shape = crouching_cshape
-	collision_shape.position.y += 12
+	collision_shape.position.y = -10
 
 func stand():
 	if is_crouching == false:
 		return
 	is_crouching = false
 	collision_shape.shape = standing_cshape
-	collision_shape.position.y -= 12
+	collision_shape.position.y = -16
 	cancel_stealth()
 	
 func stealth():
