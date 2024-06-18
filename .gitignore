@@ -6,3 +6,5 @@ build/*
 **/*.exe
 **/*.zip
 
+# User specific settings
+.vscode

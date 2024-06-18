@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://budihsdtck5r2"
-path="res://.godot/imported/Pillar4.png-5f0b760bd15009de7e9d12e716163f82.ctex"
+uid="uid://c01fomgqhyyj8"
+path="res://.godot/imported/Echo_Idle6.png-4afeb854ceaa01554673e8229a79d5ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pillar4.png"
-dest_files=["res://.godot/imported/Pillar4.png-5f0b760bd15009de7e9d12e716163f82.ctex"]
+source_file="res://assets/sprites/character/idle/Echo_Idle6.png"
+dest_files=["res://.godot/imported/Echo_Idle6.png-4afeb854ceaa01554673e8229a79d5ed.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvyrd35dfh03h"
-path="res://.godot/imported/Pillar1.png-f7c456d488ac688b3aaa5c357b264fc0.ctex"
+uid="uid://dpgs4030q0up7"
+path="res://.godot/imported/Echo_Jump2.png-5f02b60b82d9c263818eee0459b089ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pillar1.png"
-dest_files=["res://.godot/imported/Pillar1.png-f7c456d488ac688b3aaa5c357b264fc0.ctex"]
+source_file="res://assets/sprites/character/jump/Echo_Jump2.png"
+dest_files=["res://.godot/imported/Echo_Jump2.png-5f02b60b82d9c263818eee0459b089ed.ctex"]
 
 [params]
 

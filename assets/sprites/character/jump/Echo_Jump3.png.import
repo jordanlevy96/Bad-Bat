@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kg7il5dqsk1q"
-path="res://.godot/imported/Rocks.png-b4269611e516a53ea44e41168d62a139.ctex"
+uid="uid://ybylifuoq8r0"
+path="res://.godot/imported/Echo_Jump3.png-c742f26f84b7861e8657d158b66fdaa0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Rocks.png"
-dest_files=["res://.godot/imported/Rocks.png-b4269611e516a53ea44e41168d62a139.ctex"]
+source_file="res://assets/sprites/character/jump/Echo_Jump3.png"
+dest_files=["res://.godot/imported/Echo_Jump3.png-c742f26f84b7861e8657d158b66fdaa0.ctex"]
 
 [params]
 
