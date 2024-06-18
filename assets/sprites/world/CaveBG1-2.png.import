@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp3i53db1k0mb"
-path="res://.godot/imported/CaveBG1Light1.png-198c959a42eea0b6260e626021baf724.ctex"
+uid="uid://c8ndkuhv5v5pg"
+path="res://.godot/imported/CaveBG1-2.png-581a0ae5f8f1d576cb3791c1dff105c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CaveBG1Light1.png"
-dest_files=["res://.godot/imported/CaveBG1Light1.png-198c959a42eea0b6260e626021baf724.ctex"]
+source_file="res://assets/sprites/world/CaveBG1-2.png"
+dest_files=["res://.godot/imported/CaveBG1-2.png-581a0ae5f8f1d576cb3791c1dff105c4.ctex"]
 
 [params]
 

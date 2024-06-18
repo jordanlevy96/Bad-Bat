@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ndkuhv5v5pg"
-path="res://.godot/imported/CaveBG1-2.png-19e9eefeb3c6781ecc0693a726af0039.ctex"
+uid="uid://d4erkr8fg4qfa"
+path="res://.godot/imported/Echo_Crouch-5.png-92b62dd2fba11858d8d3088ad97c04fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CaveBG1-2.png"
-dest_files=["res://.godot/imported/CaveBG1-2.png-19e9eefeb3c6781ecc0693a726af0039.ctex"]
+source_file="res://assets/sprites/character/crouch/Echo_Crouch-5.png"
+dest_files=["res://.godot/imported/Echo_Crouch-5.png-92b62dd2fba11858d8d3088ad97c04fd.ctex"]
 
 [params]
 

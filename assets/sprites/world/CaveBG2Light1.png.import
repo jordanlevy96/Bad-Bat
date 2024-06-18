@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c12touexwqcnb"
-path="res://.godot/imported/CaveBG2Light1.png-57610bc3636ba13ea66232a4cdc9f6b9.ctex"
+path="res://.godot/imported/CaveBG2Light1.png-db408a753b8afb8466cd67d0cfaea830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CaveBG2Light1.png"
-dest_files=["res://.godot/imported/CaveBG2Light1.png-57610bc3636ba13ea66232a4cdc9f6b9.ctex"]
+source_file="res://assets/sprites/world/CaveBG2Light1.png"
+dest_files=["res://.godot/imported/CaveBG2Light1.png-db408a753b8afb8466cd67d0cfaea830.ctex"]
 
 [params]
 

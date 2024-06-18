@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgtueukgn6jr"
-path="res://.godot/imported/Pillar2.png-56ab37d24a6fd3d3a8a75fdc6560f695.ctex"
+uid="uid://b68r2diiqqjkq"
+path="res://.godot/imported/Echo_Crouch-4.png-3e3beea5aea1e1ce86b8a34005946bb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pillar2.png"
-dest_files=["res://.godot/imported/Pillar2.png-56ab37d24a6fd3d3a8a75fdc6560f695.ctex"]
+source_file="res://assets/sprites/character/crouch/Echo_Crouch-4.png"
+dest_files=["res://.godot/imported/Echo_Crouch-4.png-3e3beea5aea1e1ce86b8a34005946bb3.ctex"]
 
 [params]
 
