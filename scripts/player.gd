@@ -98,14 +98,14 @@ func crouch():
 		return
 	is_crouching = true
 	collision_shape.shape = crouching_cshape
-	collision_shape.position.y = -12
+	collision_shape.position.y += 12
 
 func stand():
 	if is_crouching == false:
 		return
 	is_crouching = false
 	collision_shape.shape = standing_cshape
-	collision_shape.position.y = -18
+	collision_shape.position.y -= 12
 	cancel_stealth()
 	
 func stealth():
