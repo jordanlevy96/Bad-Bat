@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4jtn0xpepcwl"]
+[gd_scene load_steps=20 format=3 uid="uid://b4jtn0xpepcwl"]
 
 [ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="1_1pgbp"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_7ybr6"]
@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="5_8mwrn"]
 [ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="10_m62hr"]
 [ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="11_cpkmm"]
+[ext_resource type="Texture2D" uid="uid://teuex342f4ow" path="res://assets/UI/A: < Left.png" id="12_o1y6i"]
+[ext_resource type="Texture2D" uid="uid://bqyh75ujkmy12" path="res://assets/UI/S: Down Crouch.png" id="13_a5xen"]
+[ext_resource type="Texture2D" uid="uid://sfckjjmp7dmh" path="res://assets/UI/D: > Right.png" id="13_k1o7i"]
+[ext_resource type="Texture2D" uid="uid://cuknnkcae8if0" path="res://assets/UI/W: Space: ^ Jump.png" id="16_mkco0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75bgx"]
 texture = ExtResource("2_oetlq")
@@ -3418,25 +3422,15 @@ scale = Vector2(1.5, 1.5)
 [node name="labels" type="Node2D" parent="."]
 position = Vector2(1317, 531)
 
-[node name="crouch" type="Label" parent="labels"]
-offset_left = -1031.0
-offset_top = 20.0
-offset_right = -989.0
-offset_bottom = 43.0
-theme_override_fonts/font = ExtResource("11_cpkmm")
-theme_override_font_sizes/font_size = 8
-text = "crouch"
-horizontal_alignment = 1
+[node name="A_<Left" type="Sprite2D" parent="labels"]
+position = Vector2(-1247, -25)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("12_o1y6i")
 
-[node name="jump" type="Label" parent="labels"]
-offset_left = -707.0
-offset_top = -15.0
-offset_right = -665.0
-offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("11_cpkmm")
-theme_override_font_sizes/font_size = 8
-text = "jump"
-horizontal_alignment = 1
+[node name="D_>Right" type="Sprite2D" parent="labels"]
+position = Vector2(-1171, -25)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("13_k1o7i")
 
 [node name="hide" type="Label" parent="labels"]
 offset_left = -124.0
@@ -3446,3 +3440,18 @@ theme_override_fonts/font = ExtResource("11_cpkmm")
 theme_override_font_sizes/font_size = 8
 text = "hide"
 horizontal_alignment = 1
+
+[node name="S_DownCrouch" type="Sprite2D" parent="labels"]
+position = Vector2(-1000, -2)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("13_a5xen")
+
+[node name="S_DownCrouch2" type="Sprite2D" parent="labels"]
+position = Vector2(-104, 67)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("13_a5xen")
+
+[node name="W_Space_^Jump" type="Sprite2D" parent="labels"]
+position = Vector2(-758, -12)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("16_mkco0")
