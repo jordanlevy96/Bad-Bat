@@ -107,10 +107,9 @@ position = Vector2(-30, -8)
 texture = ExtResource("3_f26af")
 
 [node name="killzone" parent="." instance=ExtResource("2_chogt")]
-position = Vector2(-9, 0)
+position = Vector2(-21, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_1atgg")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]

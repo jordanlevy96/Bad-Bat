@@ -13,6 +13,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var raycast_crouching_1 = $RayCast2D_Crouching1
 @onready var raycast_crouching_2 = $RayCast2D_Crouching2
 
+var jump_press = 0.0
+var jump_timer = 0.0
+var jump_time = 0.1 #how long the player can still jump after starting to fall
+
 var is_crouching = false
 var stuck_crouching = false
 var is_hidden = false
@@ -26,16 +30,33 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if is_on_floor():
+		jump_timer = 0.0
+	else:
+		jump_timer += delta
+		jump_press -= delta
+	
+	if jump_press < 0.0:
+		jump_press = 0.0
+	
+	if Input.is_action_just_pressed("jump") and jump_timer < jump_time:
 		velocity.y = JUMP_VELOCITY
-
+	
+	if Input.is_action_just_pressed("jump"):
+		jump_press = 0.1
+				
+	if is_on_floor() and (jump_press > 0.0):
+		print(jump_press)
+		velocity.y = JUMP_VELOCITY
+		jump_press = 0.0
+	
 	# Get the input direction and handle the movement/deceleration: -1, 0, 1
 	var direction = Input.get_axis("left", "right")
 	
 	# Flip the Sprite
 	if direction != 0:
 		animated_sprite.flip_h = (direction == -1)
-		animated_sprite.position.x = direction * 4
+		animated_sprite.position.x = direction * -5
 	
 	# Crouch
 	if Input.is_action_just_pressed("crouch"):
@@ -98,14 +119,14 @@ func crouch():
 		return
 	is_crouching = true
 	collision_shape.shape = crouching_cshape
-	collision_shape.position.y += 12
+	collision_shape.position.y = -10
 
 func stand():
 	if is_crouching == false:
 		return
 	is_crouching = false
 	collision_shape.shape = standing_cshape
-	collision_shape.position.y -= 12
+	collision_shape.position.y = -16
 	cancel_stealth()
 	
 func stealth():

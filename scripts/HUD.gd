@@ -3,6 +3,10 @@ extends CanvasLayer
 func _ready():
 	$Instructions.hide()
 
+func _process(_delta):
+	if Input.is_action_just_pressed("start"):
+		_on_start_button_pressed()
+
 func _on_start_button_pressed():
 	$StartButton.hide()
 	$Logo.hide()
