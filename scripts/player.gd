@@ -5,6 +5,7 @@ signal hit
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 const CROUCH_OFFSET = 9
+const WIN_LABEL_OFFSET = Vector2(-30, -75)
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -138,3 +139,14 @@ func cancel_stealth():
 	if get_collision_layer_value(2) == false:
 		set_collision_layer_value(2, true)
 		print("Visible")
+
+func _on_win_zone_body_entered(_body):
+	var label = Label.new()
+	label.text = "You win!"
+	label.set_anchors_preset(Control.PRESET_CENTER_TOP, true)
+	add_child(label)
+	label.position += WIN_LABEL_OFFSET
+	$WinTimer.start()
+
+func _on_win_timer_timeout():
+	get_tree().change_scene_to_file("res://scenes/levels/level_select.tscn")

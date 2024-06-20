@@ -179,3 +179,9 @@ target_position = Vector2(0, -39)
 [node name="RayCast2D_Crouching2" type="RayCast2D" parent="."]
 position = Vector2(14, 0)
 target_position = Vector2(0, -39)
+
+[node name="WinTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]

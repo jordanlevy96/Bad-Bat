@@ -8,3 +8,4 @@ build/*
 
 # User specific settings
 .vscode
+*.import
