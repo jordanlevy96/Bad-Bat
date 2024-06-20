@@ -4,6 +4,7 @@ signal hit
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+const CROUCH_OFFSET = 9
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -98,14 +99,14 @@ func crouch():
 		return
 	is_crouching = true
 	collision_shape.shape = crouching_cshape
-	collision_shape.position.y += 12
+	collision_shape.position.y += CROUCH_OFFSET
 
 func stand():
 	if is_crouching == false:
 		return
 	is_crouching = false
 	collision_shape.shape = standing_cshape
-	collision_shape.position.y -= 12
+	collision_shape.position.y -= CROUCH_OFFSET
 	cancel_stealth()
 	
 func stealth():

@@ -155,20 +155,20 @@ collision_mask = 5
 script = ExtResource("1_h13gn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -30)
-scale = Vector2(0.02, 0.02)
+position = Vector2(0, -23)
+scale = Vector2(0.015, 0.015)
 sprite_frames = SubResource("SpriteFrames_t0dku")
-animation = &"crouch_idle"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -23)
+position = Vector2(4.5, -19.5)
 shape = ExtResource("8_eexei")
 
 [node name="RayCast2D_Crouching1" type="RayCast2D" parent="."]
-position = Vector2(-6, 0)
-target_position = Vector2(0, -46)
+position = Vector2(-5, 0)
+target_position = Vector2(0, -39)
 
 [node name="RayCast2D_Crouching2" type="RayCast2D" parent="."]
-position = Vector2(6, 0)
-target_position = Vector2(0, -46)
+position = Vector2(14, 0)
+target_position = Vector2(0, -39)
