@@ -1,24 +1,25 @@
 [gd_scene load_steps=20 format=3 uid="uid://b4jtn0xpepcwl"]
 
-[ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="1_1pgbp"]
-[ext_resource type="Script" path="res://scripts/main.gd" id="1_7ybr6"]
-[ext_resource type="Texture2D" uid="uid://dd14j7isrec2j" path="res://assets/sprites/world/Cave.png" id="2_oetlq"]
-[ext_resource type="Texture2D" uid="uid://bd6x5wea4mted" path="res://assets/sprites/world/ParallaxCave4.png" id="2_qjtgh"]
-[ext_resource type="PackedScene" uid="uid://d05a8jpdpfe0" path="res://scenes/platform_01.tscn" id="3_3e73d"]
-[ext_resource type="Texture2D" uid="uid://bui6jr1jt0gb2" path="res://assets/sprites/world/ParallaxCave3.png" id="3_bdifi"]
-[ext_resource type="Texture2D" uid="uid://bc8wdq34mq4ky" path="res://assets/sprites/world/ParallaxCave2.png" id="4_cv450"]
-[ext_resource type="PackedScene" uid="uid://b4ilb3crh634j" path="res://scenes/stealthrock_01.tscn" id="4_qae37"]
-[ext_resource type="Texture2D" uid="uid://ivmxnd4rt27q" path="res://assets/sprites/world/ParallaxCave1.png" id="5_0hlxe"]
-[ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="5_8mwrn"]
-[ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="10_m62hr"]
-[ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="11_cpkmm"]
-[ext_resource type="Texture2D" uid="uid://teuex342f4ow" path="res://assets/UI/A  Left.png" id="12_o1y6i"]
-[ext_resource type="Texture2D" uid="uid://bqyh75ujkmy12" path="res://assets/UI/S Down Crouch.png" id="13_a5xen"]
-[ext_resource type="Texture2D" uid="uid://sfckjjmp7dmh" path="res://assets/UI/D  Right.png" id="13_k1o7i"]
-[ext_resource type="Texture2D" uid="uid://cuknnkcae8if0" path="res://assets/UI/W Space ^ Jump.png" id="16_mkco0"]
+[ext_resource type="Texture2D" uid="uid://dd14j7isrec2j" path="res://assets/sprites/world/Cave.png" id="2_eiqnn"]
+[ext_resource type="Texture2D" uid="uid://bd6x5wea4mted" path="res://assets/sprites/world/ParallaxCave4.png" id="3_2xjku"]
+[ext_resource type="Texture2D" uid="uid://bui6jr1jt0gb2" path="res://assets/sprites/world/ParallaxCave3.png" id="4_8gxl3"]
+[ext_resource type="Texture2D" uid="uid://bc8wdq34mq4ky" path="res://assets/sprites/world/ParallaxCave2.png" id="5_ubhjv"]
+[ext_resource type="Texture2D" uid="uid://ivmxnd4rt27q" path="res://assets/sprites/world/ParallaxCave1.png" id="6_7twej"]
+[ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="7_tvd6w"]
+[ext_resource type="PackedScene" uid="uid://d05a8jpdpfe0" path="res://scenes/platform_01.tscn" id="8_3ykvn"]
+[ext_resource type="PackedScene" uid="uid://b4ilb3crh634j" path="res://scenes/stealthrock_01.tscn" id="9_10u1y"]
+[ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="10_drl4s"]
+[ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="11_x60tx"]
+[ext_resource type="Texture2D" uid="uid://teuex342f4ow" path="res://assets/UI/A  Left.png" id="12_3yw1m"]
+[ext_resource type="Texture2D" uid="uid://sfckjjmp7dmh" path="res://assets/UI/D  Right.png" id="13_sq8j2"]
+[ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="14_fur85"]
+[ext_resource type="Texture2D" uid="uid://bqyh75ujkmy12" path="res://assets/UI/S Down Crouch.png" id="15_uj3qw"]
+[ext_resource type="Texture2D" uid="uid://cuknnkcae8if0" path="res://assets/UI/W Space ^ Jump.png" id="16_vkgul"]
+
+[sub_resource type="GDScript" id="GDScript_erp8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75bgx"]
-texture = ExtResource("2_oetlq")
+texture = ExtResource("2_eiqnn")
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3323,7 +3324,7 @@ sources/0 = SubResource("TileSetAtlasSource_75bgx")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c4gsr"]
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_7ybr6")
+script = SubResource("GDScript_erp8m")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_sk57v")
@@ -3336,7 +3337,7 @@ layer_0/tile_data = PackedInt32Array(2359298, 524288, 8, 2424834, 524288, 9, 235
 motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 0"]
-texture = ExtResource("2_qjtgh")
+texture = ExtResource("3_2xjku")
 centered = false
 
 [node name="ParallaxLayer 25" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -3346,7 +3347,7 @@ motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 25"]
 position = Vector2(3, -2)
-texture = ExtResource("3_bdifi")
+texture = ExtResource("4_8gxl3")
 centered = false
 
 [node name="ParallaxLayer 50" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -3355,7 +3356,7 @@ motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 50"]
 position = Vector2(3, -2)
-texture = ExtResource("4_cv450")
+texture = ExtResource("5_ubhjv")
 centered = false
 
 [node name="ParallaxLayer 75" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -3364,10 +3365,10 @@ motion_mirroring = Vector2(1280, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 75"]
 position = Vector2(3, -2)
-texture = ExtResource("5_0hlxe")
+texture = ExtResource("6_7twej")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("1_1pgbp")]
+[node name="Player" parent="." instance=ExtResource("7_tvd6w")]
 unique_name_in_owner = true
 position = Vector2(62, 564)
 
@@ -3379,25 +3380,25 @@ limit_bottom = 690
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="platform01" parent="." instance=ExtResource("3_3e73d")]
+[node name="platform01" parent="." instance=ExtResource("8_3ykvn")]
 position = Vector2(1922, 528)
 
 [node name="stealth" type="Node2D" parent="."]
 z_index = 10
 
-[node name="stealthrock01" parent="stealth" instance=ExtResource("4_qae37")]
+[node name="stealthrock01" parent="stealth" instance=ExtResource("9_10u1y")]
 position = Vector2(1213, 568)
 
-[node name="stealthrock02" parent="stealth" instance=ExtResource("4_qae37")]
+[node name="stealthrock02" parent="stealth" instance=ExtResource("9_10u1y")]
 position = Vector2(2206, 600)
 
-[node name="stealthrock03" parent="stealth" instance=ExtResource("4_qae37")]
+[node name="stealthrock03" parent="stealth" instance=ExtResource("9_10u1y")]
 position = Vector2(2500, 600)
 
-[node name="stealthrock04" parent="stealth" instance=ExtResource("4_qae37")]
+[node name="stealthrock04" parent="stealth" instance=ExtResource("9_10u1y")]
 position = Vector2(2794, 600)
 
-[node name="killzone" parent="." instance=ExtResource("5_8mwrn")]
+[node name="killzone" parent="." instance=ExtResource("10_drl4s")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(865, 721)
@@ -3407,15 +3408,15 @@ shape = SubResource("WorldBoundaryShape2D_c4gsr")
 z_index = 15
 position = Vector2(1218, 563)
 
-[node name="snake021" parent="enemies" instance=ExtResource("10_m62hr")]
+[node name="snake021" parent="enemies" instance=ExtResource("11_x60tx")]
 position = Vector2(-1, -5)
 scale = Vector2(1.5, 1.5)
 
-[node name="snake022" parent="enemies" instance=ExtResource("10_m62hr")]
+[node name="snake022" parent="enemies" instance=ExtResource("11_x60tx")]
 position = Vector2(1013, 27)
 scale = Vector2(1.5, 1.5)
 
-[node name="snake023" parent="enemies" instance=ExtResource("10_m62hr")]
+[node name="snake023" parent="enemies" instance=ExtResource("11_x60tx")]
 position = Vector2(1565, 27)
 scale = Vector2(1.5, 1.5)
 
@@ -3425,18 +3426,18 @@ position = Vector2(1317, 531)
 [node name="A_<Left" type="Sprite2D" parent="labels"]
 position = Vector2(-1247, -25)
 scale = Vector2(0.02, 0.02)
-texture = ExtResource("12_o1y6i")
+texture = ExtResource("12_3yw1m")
 
 [node name="D_>Right" type="Sprite2D" parent="labels"]
 position = Vector2(-1171, -25)
 scale = Vector2(0.02, 0.02)
-texture = ExtResource("13_k1o7i")
+texture = ExtResource("13_sq8j2")
 
 [node name="hide" type="Label" parent="labels"]
 offset_left = -124.0
 offset_right = -82.0
 offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("11_cpkmm")
+theme_override_fonts/font = ExtResource("14_fur85")
 theme_override_font_sizes/font_size = 8
 text = "hide"
 horizontal_alignment = 1
@@ -3444,14 +3445,14 @@ horizontal_alignment = 1
 [node name="S_DownCrouch" type="Sprite2D" parent="labels"]
 position = Vector2(-1000, -2)
 scale = Vector2(0.02, 0.02)
-texture = ExtResource("13_a5xen")
+texture = ExtResource("15_uj3qw")
 
 [node name="S_DownCrouch2" type="Sprite2D" parent="labels"]
 position = Vector2(-104, 67)
 scale = Vector2(0.02, 0.02)
-texture = ExtResource("13_a5xen")
+texture = ExtResource("15_uj3qw")
 
 [node name="W_Space_^Jump" type="Sprite2D" parent="labels"]
 position = Vector2(-758, -12)
 scale = Vector2(0.02, 0.02)
-texture = ExtResource("16_mkco0")
+texture = ExtResource("16_vkgul")

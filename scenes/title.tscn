@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://ybpajyxse2t1"]
+[gd_scene load_steps=4 format=3 uid="uid://ybpajyxse2t1"]
 
-[ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="1_c34g8"]
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_t7bjw"]
 [ext_resource type="FontFile" uid="uid://dgp2n1iv5fqe5" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_mvsxb"]
 [ext_resource type="Texture2D" uid="uid://bf8ht4ce36ajr" path="res://assets/sprites/items/Logo Bad Bat.png" id="3_8geun"]
@@ -18,30 +17,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="Instructions" type="Label" parent="CanvasLayer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -154.0
-offset_right = 224.0
-offset_bottom = 111.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_c34g8")
-theme_override_font_sizes/font_size = 32
-text = "Hide from the Enemies!"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="MessageTimer" type="Timer" parent="CanvasLayer"]
-wait_time = 2.0
-one_shot = true
 
 [node name="Logo" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(634, 300)
@@ -65,5 +40,4 @@ theme_override_font_sizes/font_size = 64
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="timeout" from="CanvasLayer/MessageTimer" to="CanvasLayer" method="_on_message_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/StartButton" to="CanvasLayer" method="_on_start_button_pressed"]
