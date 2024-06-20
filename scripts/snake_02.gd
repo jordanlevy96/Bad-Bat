@@ -1,7 +1,9 @@
 extends Node2D
 
 const SPEED = 90
-const attack_SPEED = 180
+const ATTACK_SPEED = 180
+const SPRITE_OFFSET = 30
+const KILLZONE_OFFSET = 33
 
 var direction = -1
 var attack_player = false
@@ -21,14 +23,14 @@ func _process(delta):
 		direction = -1
 		animated_sprite.flip_h = false
 		detection_sprite.flip_h = false
-		detection_sprite.position.x = -30
-		killzone.position.x = -21
+		detection_sprite.position.x = -SPRITE_OFFSET
+		killzone.position.x = -KILLZONE_OFFSET
 	if ray_cast_left.is_colliding():
 		direction = 1
 		animated_sprite.flip_h = true
 		detection_sprite.flip_h = true
-		detection_sprite.position.x = 30
-		killzone.position.x = 21
+		detection_sprite.position.x = SPRITE_OFFSET
+		killzone.position.x = KILLZONE_OFFSET
 		
 	position.x += direction * SPEED * delta
 	
@@ -36,7 +38,7 @@ func _process(delta):
 	ray_cast_left.add_exception(player)
 	
 	if attack_player:
-		position.x += direction * attack_SPEED * delta
+		position.x += direction * ATTACK_SPEED * delta
 	
 
 func _on_killzone_body_entered(body):

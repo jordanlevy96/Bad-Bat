@@ -96,6 +96,7 @@ size = Vector2(48, 34)
 script = ExtResource("1_utow3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_kc44r")
 animation = &"attack"
@@ -108,11 +109,11 @@ position = Vector2(-30, -8)
 texture = ExtResource("3_f26af")
 
 [node name="killzone" parent="." instance=ExtResource("2_chogt")]
-position = Vector2(-21, 0)
+position = Vector2(-33, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(-24, -10)
 shape = SubResource("RectangleShape2D_1atgg")
+disabled = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(3, 9)
