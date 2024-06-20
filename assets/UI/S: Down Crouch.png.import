@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqyh75ujkmy12"
-path="res://.godot/imported/S: Down Crouch.png-80d8d8ce34581bac62d6b1c8af773716.ctex"
+path="res://.godot/imported/S Down Crouch.png-26d66099344d03a737f5507d8433edd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/S: Down Crouch.png"
-dest_files=["res://.godot/imported/S: Down Crouch.png-80d8d8ce34581bac62d6b1c8af773716.ctex"]
+source_file="res://assets/UI/S Down Crouch.png"
+dest_files=["res://.godot/imported/S Down Crouch.png-26d66099344d03a737f5507d8433edd7.ctex"]
 
 [params]
 
