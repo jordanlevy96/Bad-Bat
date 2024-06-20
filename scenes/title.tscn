@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ybpajyxse2t1"]
 
 [ext_resource type="Script" path="res://scripts/title.gd" id="1_t7bjw"]
-[ext_resource type="FontFile" uid="uid://dgp2n1iv5fqe5" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_mvsxb"]
-[ext_resource type="Texture2D" uid="uid://bf8ht4ce36ajr" path="res://assets/sprites/items/Logo Bad Bat.png" id="3_8geun"]
+[ext_resource type="FontFile" uid="uid://cyl41jkv5cgtc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_mvsxb"]
+[ext_resource type="Texture2D" uid="uid://crgdh5yncbd0f" path="res://assets/sprites/items/Logo Bad Bat.png" id="3_8geun"]
 
 [node name="Title" type="Node2D"]
 
