@@ -12,10 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="5_8mwrn"]
 [ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="10_m62hr"]
 [ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="11_cpkmm"]
-[ext_resource type="Texture2D" uid="uid://teuex342f4ow" path="res://assets/UI/A: < Left.png" id="12_o1y6i"]
-[ext_resource type="Texture2D" uid="uid://bqyh75ujkmy12" path="res://assets/UI/S: Down Crouch.png" id="13_a5xen"]
-[ext_resource type="Texture2D" uid="uid://sfckjjmp7dmh" path="res://assets/UI/D: > Right.png" id="13_k1o7i"]
-[ext_resource type="Texture2D" uid="uid://cuknnkcae8if0" path="res://assets/UI/W: Space: ^ Jump.png" id="16_mkco0"]
+[ext_resource type="Texture2D" uid="uid://teuex342f4ow" path="res://assets/UI/A  Left.png" id="12_o1y6i"]
+[ext_resource type="Texture2D" uid="uid://bqyh75ujkmy12" path="res://assets/UI/S Down Crouch.png" id="13_a5xen"]
+[ext_resource type="Texture2D" uid="uid://sfckjjmp7dmh" path="res://assets/UI/D  Right.png" id="13_k1o7i"]
+[ext_resource type="Texture2D" uid="uid://cuknnkcae8if0" path="res://assets/UI/W Space ^ Jump.png" id="16_mkco0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75bgx"]
 texture = ExtResource("2_oetlq")
