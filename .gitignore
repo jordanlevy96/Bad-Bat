@@ -6,6 +6,7 @@ build/*
 **/*.exe
 **/*.zip
 
-# User specific settings
-.vscode
 *.import
+
+
+**/.DS_Store
