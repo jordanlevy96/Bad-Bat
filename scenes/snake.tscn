@@ -100,7 +100,7 @@ size = Vector2(11, 25)
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_8ik2e"]
 points = PackedVector2Array(0, 0, -36, -22, -50, 0, -36, 22)
 
-[node name="snake02" type="Node2D"]
+[node name="Snake" type="Node2D"]
 script = ExtResource("1_utow3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -126,6 +126,10 @@ shape = SubResource("RectangleShape2D_1atgg")
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(3, -3)
 target_position = Vector2(16, 0)
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+position = Vector2(-16, -3)
+target_position = Vector2(0, 5)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(-2, -3)
