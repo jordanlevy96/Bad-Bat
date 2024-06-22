@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d05a8jpdpfe0" path="res://scenes/platform_01.tscn" id="8_3ykvn"]
 [ext_resource type="PackedScene" uid="uid://b4ilb3crh634j" path="res://scenes/stealthrock_01.tscn" id="9_10u1y"]
 [ext_resource type="PackedScene" uid="uid://brq2cqxpoewop" path="res://scenes/killzone.tscn" id="10_drl4s"]
-[ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="11_x60tx"]
+[ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake.tscn" id="11_x60tx"]
 [ext_resource type="Texture2D" uid="uid://bn7i0jetfcpx" path="res://assets/UI/Left.png" id="12_3yw1m"]
 [ext_resource type="Texture2D" uid="uid://ckt3jfsmn6nag" path="res://assets/UI/Right.png" id="13_sq8j2"]
 [ext_resource type="FontFile" uid="uid://cynwvuas6q3fg" path="res://assets/fonts/PixelOperator8.ttf" id="14_fur85"]
