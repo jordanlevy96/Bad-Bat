@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+func _process(_delta):
+	if Input.is_action_just_pressed("start"):
+		_on_tutorial_button_pressed()
+
 func _on_tutorial_button_pressed():
 	$Instructions.show()
 	$CenterContainer.hide()

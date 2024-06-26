@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dju530hrgx84g"]
 
 [ext_resource type="Script" path="res://scripts/level_select.gd" id="1_hj1u5"]
-[ext_resource type="FontFile" uid="uid://ddaeyn3cstf37" path="res://assets/fonts/PixelOperator8.ttf" id="2_do2pn"]
-[ext_resource type="FontFile" uid="uid://dgp2n1iv5fqe5" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_xpk73"]
+[ext_resource type="FontFile" uid="uid://cuqt7of2lqahw" path="res://assets/fonts/PixelOperator8.ttf" id="2_do2pn"]
+[ext_resource type="FontFile" uid="uid://d23yx6k38h60i" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_xpk73"]
 
 [node name="LevelSelect" type="CanvasLayer"]
 script = ExtResource("1_hj1u5")
