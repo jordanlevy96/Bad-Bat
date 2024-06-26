@@ -97,8 +97,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1atgg"]
 size = Vector2(11, 25)
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_8ik2e"]
-points = PackedVector2Array(0, 0, -36, -22, -50, 0, -36, 22)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slc6w"]
+size = Vector2(16, 25)
 
 [node name="Snake" type="Node2D"]
 script = ExtResource("1_utow3")
@@ -118,13 +118,14 @@ texture = ExtResource("3_f26af")
 
 [node name="killzone" parent="." instance=ExtResource("2_chogt")]
 position = Vector2(-13.5, -17)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_1atgg")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-position = Vector2(3, -3)
+position = Vector2(0, -3)
 target_position = Vector2(16, 0)
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
@@ -132,8 +133,8 @@ position = Vector2(-16, -3)
 target_position = Vector2(0, 5)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-position = Vector2(-2, -3)
-target_position = Vector2(-42, 0)
+position = Vector2(0, -3)
+target_position = Vector2(-35, 0)
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_p55yv")
@@ -141,9 +142,23 @@ bus = &"SFX"
 
 [node name="DetectionCone" type="Area2D" parent="."]
 position = Vector2(-14, -23)
+collision_layer = 4
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionCone"]
-shape = SubResource("ConvexPolygonShape2D_8ik2e")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectionCone"]
+polygon = PackedVector2Array(0, 0, -36, -22, -50, 0, -36, 22)
 
+[node name="AttackZone" type="Area2D" parent="."]
+position = Vector2(-27, -13.5)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone"]
+shape = SubResource("RectangleShape2D_slc6w")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
 [connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]
 [connection signal="body_exited" from="killzone" to="." method="_on_killzone_body_exited"]
+[connection signal="body_shape_entered" from="DetectionCone" to="." method="_on_detection_cone_body_shape_entered"]
+[connection signal="body_shape_exited" from="DetectionCone" to="." method="_on_detection_cone_body_shape_exited"]
+[connection signal="body_entered" from="AttackZone" to="." method="_on_attack_zone_body_entered"]

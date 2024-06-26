@@ -100,16 +100,16 @@ shape = SubResource("WorldBoundaryShape2D_c4gsr")
 z_index = 15
 position = Vector2(1218, 563)
 
-[node name="snake021" parent="enemies" instance=ExtResource("11_x60tx")]
-position = Vector2(-1, -5)
+[node name="snake" parent="enemies" instance=ExtResource("11_x60tx")]
+position = Vector2(-6, 13)
 scale = Vector2(1.5, 1.5)
 
-[node name="snake022" parent="enemies" instance=ExtResource("11_x60tx")]
-position = Vector2(1013, 27)
+[node name="snake2" parent="enemies" instance=ExtResource("11_x60tx")]
+position = Vector2(1012, 45)
 scale = Vector2(1.5, 1.5)
 
-[node name="snake023" parent="enemies" instance=ExtResource("11_x60tx")]
-position = Vector2(1565, 27)
+[node name="snake3" parent="enemies" instance=ExtResource("11_x60tx")]
+position = Vector2(1563, 45)
 scale = Vector2(1.5, 1.5)
 
 [node name="labels" type="Node2D" parent="."]
