@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4jtn0xpepcwl"]
+[gd_scene load_steps=20 format=3 uid="uid://b4jtn0xpepcwl"]
 
 [ext_resource type="Texture2D" uid="uid://si7h2wx7v225" path="res://assets/sprites/world/Cave.png" id="2_eiqnn"]
 [ext_resource type="Texture2D" uid="uid://duqmhyk3pn3ss" path="res://assets/sprites/world/ParallaxCave4.png" id="3_2xjku"]
@@ -12,11 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake_02.tscn" id="11_x60tx"]
 [ext_resource type="Texture2D" uid="uid://dg26x52kq3ofc" path="res://assets/UI/Left.png" id="12_3yw1m"]
 [ext_resource type="Texture2D" uid="uid://c0kwdy2scpfh7" path="res://assets/UI/Right.png" id="13_sq8j2"]
-[ext_resource type="FontFile" uid="uid://cuqt7of2lqahw" path="res://assets/fonts/PixelOperator8.ttf" id="14_fur85"]
+[ext_resource type="Texture2D" uid="uid://ckcn5mhdc7vjs" path="res://assets/UI/CrouchToHide.png" id="15_4fsxb"]
 [ext_resource type="Texture2D" uid="uid://govcinxu2mt3" path="res://assets/UI/DownCrouch.png" id="15_uj3qw"]
 [ext_resource type="Texture2D" uid="uid://bulhsvvdbrqme" path="res://assets/UI/Jump.png" id="16_vkgul"]
-
-[sub_resource type="GDScript" id="GDScript_erp8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75bgx"]
 texture = ExtResource("2_eiqnn")
@@ -3328,7 +3326,6 @@ distance = -700.0
 size = Vector2(100, 100)
 
 [node name="tutorial" type="Node2D"]
-script = SubResource("GDScript_erp8m")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_sk57v")
@@ -3436,22 +3433,8 @@ position = Vector2(-1171, -25)
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("13_sq8j2")
 
-[node name="hide" type="Label" parent="labels"]
-offset_left = -124.0
-offset_right = -82.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("14_fur85")
-theme_override_font_sizes/font_size = 8
-text = "hide"
-horizontal_alignment = 1
-
 [node name="S_DownCrouch" type="Sprite2D" parent="labels"]
 position = Vector2(-1000, -2)
-scale = Vector2(0.02, 0.02)
-texture = ExtResource("15_uj3qw")
-
-[node name="S_DownCrouch2" type="Sprite2D" parent="labels"]
-position = Vector2(-104, 67)
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("15_uj3qw")
 
@@ -3466,5 +3449,10 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinZone"]
 shape = SubResource("RectangleShape2D_mooxp")
+
+[node name="CrouchToHide" type="Sprite2D" parent="."]
+position = Vector2(1212, 527)
+scale = Vector2(0.0196689, 0.0196689)
+texture = ExtResource("15_4fsxb")
 
 [connection signal="body_entered" from="WinZone" to="Player" method="_on_win_zone_body_entered"]
