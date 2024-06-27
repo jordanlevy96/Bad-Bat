@@ -1,13 +1,11 @@
 extends Camera2D
 
-# Variables to control the camera behavior
 const AHEAD_DISTANCE: float = 50.0
 const RESET_SPEED: float = 1.2
 const VELOCITY_SMOOTHING: float = 0.5
 const Y_OFFSET: float = -32.0
 
-# Internal variables
-var player
+var player: Node2D
 var velocity: Vector2 = Vector2.ZERO
 var smoothed_velocity: Vector2 = Vector2.ZERO
 
@@ -21,8 +19,6 @@ func _process(delta):
 		velocity = player.get_velocity()
 		smoothed_velocity = smoothed_velocity.lerp(velocity, VELOCITY_SMOOTHING)
 		update_camera_position(delta)
-	else:
-		print("Player not found")
 
 func update_camera_position(delta):
 	if smoothed_velocity.length() > 0:
@@ -34,6 +30,3 @@ func update_camera_position(delta):
 		# Reset camera to player position when stopped
 		var target_position = player.global_position + Vector2(0, Y_OFFSET)
 		global_position = global_position.lerp(target_position, delta * RESET_SPEED)
-
-	print('updated')
-	print(global_position)
