@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://dai8peqone1sm"]
+
+[ext_resource type="Texture2D" uid="uid://55sjot25bxqm" path="res://assets/sprites/world/CaveBG0.png" id="1_yu3hw"]
+[ext_resource type="Texture2D" uid="uid://ski5ogtn1dhc" path="res://assets/sprites/world/CaveBG1-1.png" id="2_mewvv"]
+[ext_resource type="Texture2D" uid="uid://bocen2ugkojai" path="res://assets/sprites/world/CaveBG1Light1.png" id="3_nq48l"]
+[ext_resource type="Texture2D" uid="uid://cu0fj83kcfkcl" path="res://assets/sprites/world/CaveBG1-2.png" id="4_s5bem"]
+[ext_resource type="Texture2D" uid="uid://s64kx8n5qqra" path="res://assets/sprites/world/CaveBG1Light2.png" id="5_d3eju"]
+[ext_resource type="TileSet" uid="uid://de4f0eucuhftj" path="res://resources/cave_tileset.tres" id="6_an86i"]
+
+[node name="Level01" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer 0" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 0"]
+texture = ExtResource("1_yu3hw")
+centered = false
+
+[node name="ParallaxLayer 1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -1)
+motion_scale = Vector2(0.25, 1)
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 1"]
+position = Vector2(3, -2)
+texture = ExtResource("2_mewvv")
+centered = false
+
+[node name="ParallaxLayer 2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 2"]
+position = Vector2(3, -2)
+texture = ExtResource("3_nq48l")
+centered = false
+
+[node name="ParallaxLayer 3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.75, 1)
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 3"]
+position = Vector2(3, -2)
+texture = ExtResource("4_s5bem")
+centered = false
+
+[node name="ParallaxLayer 4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 1.333)
+motion_mirroring = Vector2(3000, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer 4"]
+position = Vector2(3, -2)
+texture = ExtResource("5_d3eju")
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("6_an86i")
+format = 2
