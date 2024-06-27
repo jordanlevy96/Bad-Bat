@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://rc4x8e0vbaqg"]
 
-[ext_resource type="TileSet" uid="uid://785i82dnq6oe" path="res://resources/cave_tileset.tres" id="1_8ywtd"]
+[ext_resource type="TileSet" uid="uid://de4f0eucuhftj" path="res://resources/cave_tileset.tres" id="1_8ywtd"]
 [ext_resource type="PackedScene" uid="uid://c27pi5gnak42v" path="res://scenes/player.tscn" id="2_xa0s4"]
-[ext_resource type="PackedScene" uid="uid://d1mbuvi86dkic" path="res://scenes/snake.tscn" id="3_1wjqp"]
+[ext_resource type="PackedScene" uid="uid://cmph8i82gv88v" path="res://scenes/snake.tscn" id="3_1wjqp"]
 
 [node name="TestLevel" type="Node2D"]
 
